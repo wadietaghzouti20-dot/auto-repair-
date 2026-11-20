@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#101a2c">
+<meta name="description" content="Prenez rendez-vous avec notre garage automobile. Demande de rendez-vous simple, rapide et confirmée par notre équipe.">
+<title>RENDEVO Garage — Rendez-vous automobile</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#101a2c;--navy2:#17243a;--ink:#172033;--muted:#697586;--line:#e5e9ef;--paper:#f5f7fa;--white:#fff;--blue:#3d75e8;--blue2:#285dc8;--mint:#dff5ec;--green:#16744d;--amber:#fff4dc;--shadow:0 24px 70px rgba(16,26,44,.10);--radius:18px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:"DM Sans",sans-serif;-webkit-font-smoothing:antialiased}button,input,select,textarea{font:inherit}button{cursor:pointer}.shell{max-width:1180px;margin:auto;padding:0 28px}
+.topbar{height:76px;background:var(--navy);color:#fff;display:flex;align-items:center;border-bottom:1px solid rgba(255,255,255,.08)}.nav{display:flex;align-items:center;justify-content:space-between;width:100%}.brand{display:flex;align-items:center;gap:12px;color:#fff;text-decoration:none}.brandmark{height:38px;width:38px;border-radius:11px;background:#fff;color:var(--navy);display:grid;place-items:center;font-family:Manrope;font-weight:800;font-size:18px}.brandname{font:800 17px Manrope;letter-spacing:.12em}.brandname span{color:#8eafff}.navright{font-size:12px;color:#b7c2d2;letter-spacing:.04em}.navright b{color:#fff;font-weight:600}
+.hero{background:var(--navy);color:#fff;padding:64px 0 105px;position:relative;overflow:hidden}.hero:after{content:"";position:absolute;width:560px;height:560px;border:1px solid rgba(255,255,255,.07);border-radius:50%;right:-160px;top:-260px;box-shadow:0 0 0 65px rgba(255,255,255,.025),0 0 0 130px rgba(255,255,255,.02)}.hero-inner{position:relative;z-index:1;max-width:760px}.eyebrow{display:flex;align-items:center;gap:10px;color:#9db8f7;font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase}.eyebrow:before{content:"";height:1px;width:28px;background:#6f98f5}.hero h1{font:800 clamp(36px,5vw,59px)/1.08 Manrope;margin:22px 0 18px;letter-spacing:-.045em}.hero h1 em{font-style:normal;color:#8eafff}.hero p{font-size:16px;line-height:1.75;color:#bdc7d6;max-width:550px;margin:0}.hero-points{display:flex;gap:25px;flex-wrap:wrap;margin-top:29px;color:#d8e0ec;font-size:12px}.hero-points span{display:flex;gap:8px;align-items:center}.tick{width:17px;height:17px;border:1px solid #6389d9;border-radius:50%;display:grid;place-items:center;color:#a9c1fa;font-size:10px}
+.main{margin-top:-54px;position:relative;z-index:2;padding-bottom:75px}.booking-layout{display:grid;grid-template-columns:minmax(0,1fr) 285px;gap:22px;align-items:start}.booking-card,.side-card{background:#fff;border:1px solid #e8ecf2;border-radius:20px;box-shadow:var(--shadow)}.booking-card{padding:32px 36px 30px;min-height:560px}.progress-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:13px}.progress-kicker{font-size:10px;font-weight:700;letter-spacing:.16em;color:#8390a1}.step-count{font-size:11px;color:#7d8999;font-weight:600}.progress-track{height:4px;background:#edf0f4;border-radius:9px;overflow:hidden;margin-bottom:31px}.progress-fill{height:100%;width:20%;background:var(--blue);border-radius:9px;transition:width .2s ease}.step-title{font:800 25px Manrope;letter-spacing:-.035em;margin:0 0 7px}.step-sub{font-size:13px;color:var(--muted);margin:0 0 25px;line-height:1.6}.field-label{display:block;font-size:12px;font-weight:700;color:#39465a;margin:0 0 9px}.field{width:100%;height:51px;border:1px solid #dfe5ec;border-radius:10px;padding:0 14px;color:#202c3d;background:#fff;outline:none;transition:border .15s,box-shadow .15s}.field:focus{border-color:#6d95ed;box-shadow:0 0 0 3px rgba(61,117,232,.11)}.field::placeholder{color:#a2acb9}.field-wrap{margin-bottom:19px}.field-hint{font-size:11px;color:#8a95a4;margin-top:7px}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}.service-grid{display:grid;grid-template-columns:1fr 1fr;gap:11px}.service-option{border:1px solid #e1e6ed;background:#fff;border-radius:12px;padding:15px;text-align:left;display:flex;align-items:center;gap:12px;min-height:68px;color:var(--ink);transition:.15s}.service-option:hover{border-color:#a7bce9;background:#f9fbff}.service-option.selected{border-color:var(--blue);background:#f3f7ff;box-shadow:inset 0 0 0 1px var(--blue)}.service-icon{width:34px;height:34px;border-radius:10px;background:#edf2fb;color:#315fae;display:grid;place-items:center;flex:none}.service-option strong{font-size:12px;font-weight:700;line-height:1.35}.service-option small{display:block;font-size:10px;color:#8591a1;margin-top:3px}.choice-dot{margin-left:auto;width:16px;height:16px;border:1.5px solid #c8d0db;border-radius:50%;flex:none}.selected .choice-dot{border:5px solid var(--blue)}
+.time-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:9px;margin-top:10px}.time-option{height:42px;border:1px solid #dfe5ec;background:white;border-radius:9px;font-size:12px;font-weight:600;color:#3c485a}.time-option:hover{border-color:#8ba8e7}.time-option.selected{background:var(--navy);border-color:var(--navy);color:white}.time-option:disabled{background:#f2f4f7;color:#b5bdc8;border-color:#edf0f3;text-decoration:line-through;cursor:not-allowed}.notice{background:#f2f6fd;border:1px solid #e1eafa;color:#4f6382;border-radius:10px;padding:12px 14px;font-size:11px;line-height:1.6;margin-top:16px}.notice strong{color:#30496f}.actions{display:flex;justify-content:space-between;align-items:center;border-top:1px solid #edf0f3;margin-top:28px;padding-top:22px}.btn{border:0;border-radius:10px;height:48px;padding:0 22px;font-weight:700;font-size:12px;display:inline-flex;align-items:center;justify-content:center;gap:10px}.btn-primary{background:var(--blue);color:white;min-width:148px}.btn-primary:hover{background:var(--blue2)}.btn-primary:disabled{opacity:.45;cursor:not-allowed}.btn-back{background:#f1f3f6;color:#526073}.btn-back:hover{background:#e8edf3}.error{display:none;background:#fff0ef;color:#a63e35;border:1px solid #f4d4d0;padding:11px 13px;border-radius:9px;font-size:12px;margin-top:16px}.error.show{display:block}.summary{border:1px solid #e7ebf1;border-radius:12px;overflow:hidden}.summary-row{display:flex;justify-content:space-between;gap:20px;padding:13px 15px;border-bottom:1px solid #edf0f3;font-size:12px}.summary-row:last-child{border-bottom:0}.summary-row span{color:#778394}.summary-row strong{text-align:right;font-weight:700;color:#29364a}.success{display:none;text-align:center;padding:55px 10px}.success-icon{width:64px;height:64px;border-radius:50%;background:var(--mint);color:var(--green);display:grid;place-items:center;font-size:28px;margin:0 auto 20px}.success h2{font:800 25px Manrope;margin:0 0 10px}.success p{font-size:13px;line-height:1.7;color:#6f7b8a;max-width:410px;margin:0 auto}.reference{display:inline-block;margin:22px 0 0;background:#f1f5fb;border:1px solid #e1e8f2;padding:11px 16px;border-radius:9px;font:700 13px Manrope;letter-spacing:.06em}
+.side-card{padding:24px 22px;margin-bottom:15px}.side-label{font-size:10px;font-weight:700;letter-spacing:.16em;color:#8a95a4;text-transform:uppercase;margin-bottom:15px}.side-title{font:800 16px Manrope;margin:0 0 16px}.side-line{display:flex;gap:11px;margin:15px 0}.side-ico{width:32px;height:32px;border-radius:9px;background:#f0f4fa;color:#4269a8;display:grid;place-items:center;flex:none;font-size:14px}.side-line strong{font-size:11px;display:block;margin:1px 0 4px}.side-line small{font-size:10px;color:#8390a0;line-height:1.45;display:block}.side-foot{font-size:10px;color:#8792a0;line-height:1.6;border-top:1px solid #edf0f3;padding-top:14px;margin-top:18px}.trust{display:flex;align-items:center;gap:8px;color:#6d7c8e;font-size:10px;margin-top:18px}.trust-mark{width:18px;height:18px;border-radius:50%;background:#e5f4ed;color:#25865e;display:grid;place-items:center;font-size:10px}
+.footer{background:#fff;border-top:1px solid #e8ecf1;padding:25px 0;color:#8a95a4;font-size:10px}.footer-inner{display:flex;justify-content:space-between;gap:20px;align-items:center}.footer-brand{font:800 12px Manrope;letter-spacing:.13em;color:#26354a}.footer-brand span{color:var(--blue)}
+.hidden{display:none!important}
+@media(max-width:850px){.booking-layout{grid-template-columns:1fr}.side-column{display:grid;grid-template-columns:1fr 1fr;gap:14px}.side-card{margin:0}.hero{padding:53px 0 91px}.booking-card{min-height:0}}
+@media(max-width:560px){.shell{padding:0 16px}.topbar{height:65px}.navright{font-size:10px}.hero{padding:43px 0 82px}.hero h1{font-size:38px}.hero p{font-size:14px}.hero-points{gap:12px;font-size:10px}.main{margin-top:-45px}.booking-card{padding:24px 19px 22px;border-radius:16px}.step-title{font-size:22px}.service-grid{grid-template-columns:1fr}.service-option{min-height:60px}.time-grid{grid-template-columns:repeat(3,1fr)}.grid2{grid-template-columns:1fr;gap:0}.side-column{grid-template-columns:1fr}.side-card{padding:20px}.footer-inner{align-items:flex-start;flex-direction:column;gap:8px}.actions{gap:10px}.btn{padding:0 16px}.btn-primary{min-width:130px}}
+</style>
+</head>
+<body>
+<header class="topbar">
+ <div class="shell nav">
+  <a class="brand" href="#" aria-label="RENDEVO accueil"><div class="brandmark">R</div><div class="brandname">RENDEVO<span>.</span></div></a>
+  <div class="navright"><b>ESPACE CLIENT</b> &nbsp;·&nbsp; SERVICE AUTOMOBILE</div>
+ </div>
+</header>
+<section class="hero">
+ <div class="shell">
+  <div class="hero-inner">
+   <div class="eyebrow">ENTRETIEN · DIAGNOSTIC · RÉPARATION</div>
+   <h1>Votre voiture mérite<br><em>le bon rendez-vous.</em></h1>
+   <p>Décrivez votre besoin et choisissez un créneau. Notre équipe vous recontacte pour confirmer la prise en charge de votre véhicule.</p>
+   <div class="hero-points"><span><i class="tick">✓</i> Demande en ligne</span><span><i class="tick">✓</i> Réponse du garage</span><span><i class="tick">✓</i> Simple et sécurisé</span></div>
+  </div>
+ </div>
+</section>
+<main class="main shell">
+ <div class="booking-layout">
+  <section class="booking-card" aria-label="Formulaire de demande de rendez-vous">
+   <div id="bookingFlow">
+    <div class="progress-head"><span class="progress-kicker" id="progressKicker">01 — VOTRE BESOIN</span><span class="step-count" id="stepCount">ÉTAPE 1 SUR 5</span></div>
+    <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+    <div id="stepContent"></div>
+    <div class="error" id="errorBox" role="alert"></div>
+    <div class="actions"><button class="btn btn-back" id="backBtn" type="button" disabled>← Retour</button><button class="btn btn-primary" id="nextBtn" type="button">Continuer <span>→</span></button></div>
+   </div>
+   <div class="success" id="successPanel">
+    <div class="success-icon">✓</div><h2>Demande envoyée.</h2>
+    <p id="successMessage">Votre demande a bien été transmise. Le garage vous contactera pour confirmer le rendez-vous.</p>
+    <div class="reference" id="successReference"></div>
+    <p style="margin-top:22px">Merci d'avoir choisi notre service.</p>
+   </div>
+  </section>
+  <aside class="side-column">
+   <div class="side-card">
+    <div class="side-label">COMMENT ÇA MARCHE</div><h3 class="side-title">Un parcours simple.</h3>
+    <div class="side-line"><div class="side-ico">01</div><div><strong>Décrivez votre besoin</strong><small>Choisissez le type d'intervention souhaité.</small></div></div>
+    <div class="side-line"><div class="side-ico">02</div><div><strong>Choisissez un créneau</strong><small>Indiquez la date et l'heure qui vous conviennent.</small></div></div>
+    <div class="side-line"><div class="side-ico">03</div><div><strong>Recevez une réponse</strong><small>Le garage vous contacte pour confirmer.</small></div></div>
+    <div class="side-foot">L'envoi du formulaire constitue une demande de rendez-vous, et non une confirmation automatique de réparation.</div>
+   </div>
+   <div class="side-card">
+    <div class="side-label">À SAVOIR</div><h3 class="side-title">Avant votre visite.</h3>
+    <div class="side-line"><div class="side-ico">⌁</div><div><strong>Informations utiles</strong><small>Préparez le modèle de votre véhicule et, si possible, son immatriculation.</small></div></div>
+    <div class="side-line"><div class="side-ico">◷</div><div><strong>Horaires proposés</strong><small>Du dimanche au jeudi, de 08h00 à 16h30.</small></div></div>
+    <div class="trust"><span class="trust-mark">✓</span> Vos informations sont utilisées pour traiter votre demande.</div>
+   </div>
+  </aside>
+ </div>
+</main>
+<footer class="footer"><div class="shell footer-inner"><div class="footer-brand">RENDEVO<span>.</span></div><div>Une expérience de réservation conçue pour simplifier votre quotidien.</div><div>© <span id="yearNow"></span> RENDEVO</div></div></footer>
+<iframe name="rendevoPostFrame" id="rendevoPostFrame" class="hidden" title="Envoi de la demande"></iframe>
+<script>
+/* Paste your deployed Apps Script /exec URL here when ready. */
+const API_URL = "PASTE_YOUR_APPS_SCRIPT_EXEC_URL_HERE";
+
+const SERVICE_ITEMS = [
+ {name:"Diagnostic automobile",desc:"Identifier une panne ou un voyant",icon:"⌕"},
+ {name:"Vidange et entretien",desc:"Révision et entretien courant",icon:"◉"},
+ {name:"Freinage",desc:"Plaquettes, disques et contrôle",icon:"⊙"},
+ {name:"Pneumatiques",desc:"Pneus, équilibrage et géométrie",icon:"◌"},
+ {name:"Batterie et démarrage",desc:"Batterie et circuit de démarrage",icon:"ϟ"},
+ {name:"Climatisation",desc:"Contrôle et entretien",icon:"❄"},
+ {name:"Réparation mécanique",desc:"Moteur et mécanique générale",icon:"⚙"},
+ {name:"Réparation électrique",desc:"Électricité et électronique",icon:"⌁"},
+ {name:"Autre / Je ne sais pas",desc:"Expliquez-nous votre besoin",icon:"＋"}
+];
+const state = {
+ step:1, service:"", vehicle:"", year:"", plate:"", date:"", time:"",
+ name:"", phone:"", email:"", notes:"", available:[], booked:[], config:null,
+ busy:false
+};
+const titles = ["01 — VOTRE BESOIN","02 — VOTRE VÉHICULE","03 — DATE ET HORAIRE","04 — VOS COORDONNÉES","05 — VÉRIFICATION"];
+const $ = id => document.getElementById(id);
+$("yearNow").textContent = new Date().getFullYear();
+
+function apiReady(){return API_URL.indexOf("https://script.google.com/macros/s/")===0 && API_URL.endsWith("/exec");}
+function escapeHtml(s){return String(s||"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
+function showError(msg){$("errorBox").textContent=msg;$("errorBox").classList.add("show");}
+function clearError(){$("errorBox").textContent="";$("errorBox").classList.remove("show");}
+function setStep(n){state.step=n;clearError();render();}
+function render(){
+ $("progressKicker").textContent=titles[state.step-1];
+ $("stepCount").textContent="ÉTAPE "+state.step+" SUR 5";
+ $("progressFill").style.width=(state.step*20)+"%";
+ $("backBtn").disabled=state.step===1 || state.busy;
+ $("nextBtn").disabled=state.busy;
+ $("nextBtn").innerHTML=state.step===5?"Envoyer ma demande <span>→</span>":"Continuer <span>→</span>";
+ const root=$("stepContent");
+ if(state.step===1) root.innerHTML=renderService();
+ if(state.step===2) root.innerHTML=renderVehicle();
+ if(state.step===3) root.innerHTML=renderDate();
+ if(state.step===4) root.innerHTML=renderContact();
+ if(state.step===5) root.innerHTML=renderReview();
+ bindStep();
+}
+function renderService(){
+ return '<h2 class="step-title">Quel est votre besoin ?</h2><p class="step-sub">Sélectionnez le type de service souhaité pour votre véhicule.</p><div class="service-grid">'+SERVICE_ITEMS.map((s,i)=>'<button type="button" class="service-option '+(state.service===s.name?'selected':'')+'" data-service="'+i+'"><span class="service-icon">'+s.icon+'</span><span><strong>'+escapeHtml(s.name)+'</strong><small>'+escapeHtml(s.desc)+'</small></span><i class="choice-dot"></i></button>').join("")+'</div>';
+}
+function renderVehicle(){
+ return '<h2 class="step-title">Parlez-nous du véhicule.</h2><p class="step-sub">Ces informations aident notre équipe à préparer votre prise en charge.</p>'+
+ '<div class="field-wrap"><label class="field-label" for="vehicle">Marque et modèle *</label><input class="field" id="vehicle" maxlength="100" placeholder="Ex. Renault Clio 4" value="'+escapeHtml(state.vehicle)+'"></div>'+
+ '<div class="grid2"><div class="field-wrap"><label class="field-label" for="year">Année du véhicule</label><input class="field" id="year" inputmode="numeric" maxlength="4" placeholder="Ex. 2018" value="'+escapeHtml(state.year)+'"></div>'+
+ '<div class="field-wrap"><label class="field-label" for="plate">Immatriculation</label><input class="field" id="plate" maxlength="30" placeholder="Facultatif" value="'+escapeHtml(state.plate)+'"></div></div>'+
+ '<div class="field-hint">Vous pouvez laisser l'année et l'immatriculation vides si vous ne les connaissez pas.</div>';
+}
+function renderDate(){
+ const today=new Date();const min=today.getFullYear()+"-"+String(today.getMonth()+1).padStart(2,"0")+"-"+String(today.getDate()).padStart(2,"0");
+ return '<h2 class="step-title">Quand souhaitez-vous venir ?</h2><p class="step-sub">Choisissez une date, puis un créneau disponible. Le garage confirmera votre demande.</p>'+
+ '<div class="field-wrap"><label class="field-label" for="date">Date souhaitée *</label><input class="field" type="date" id="date" min="'+min+'" value="'+escapeHtml(state.date)+'"></div>'+
+ '<div id="availabilityArea">'+(state.date?renderTimes():'<div class="notice">Sélectionnez une date pour afficher les horaires disponibles.</div>')+'</div>'+
+ '<div class="notice"><strong>À noter :</strong> le créneau demandé sera confirmé par le garage après vérification de votre besoin.</div>';
+}
+function renderTimes(){
+ if(state.loadingAvailability)return '<div class="notice">Recherche des disponibilités…</div>';
+ if(state.closed)return '<div class="notice">Le garage est fermé ce jour-là. Veuillez choisir une autre date.</div>';
+ if(!state.available.length)return '<div class="notice">Aucun créneau disponible pour cette date. Essayez une autre journée.</div>';
+ return '<div class="field-label">Horaires disponibles *</div><div class="time-grid">'+state.available.map(t=>'<button type="button" class="time-option '+(state.time===t?'selected':'')+'" data-time="'+t+'">'+t+'</button>').join("")+'</div>';
+}
+function renderContact(){
+ return '<h2 class="step-title">Comment vous contacter ?</h2><p class="step-sub">Nous utiliserons ces informations uniquement pour traiter votre demande.</p>'+
+ '<div class="field-wrap"><label class="field-label" for="name">Nom et prénom *</label><input class="field" id="name" maxlength="100" autocomplete="name" placeholder="Votre nom complet" value="'+escapeHtml(state.name)+'"></div>'+
+ '<div class="grid2"><div class="field-wrap"><label class="field-label" for="phone">Téléphone *</label><input class="field" id="phone" maxlength="40" autocomplete="tel" placeholder="Votre numéro" value="'+escapeHtml(state.phone)+'"></div>'+
+ '<div class="field-wrap"><label class="field-label" for="email">E-mail</label><input class="field" id="email" type="email" maxlength="120" autocomplete="email" placeholder="nom@exemple.com" value="'+escapeHtml(state.email)+'"></div></div>'+
+ '<div class="field-wrap"><label class="field-label" for="notes">Décrivez brièvement le problème (facultatif)</label><textarea class="field" id="notes" maxlength="1000" rows="4" style="height:100px;padding:13px;resize:vertical" placeholder="Bruit inhabituel, voyant allumé, entretien à prévoir…">'+escapeHtml(state.notes)+'</textarea></div>';
+}
+function renderReview(){
+ const rows=[["Service",state.service],["Véhicule",state.vehicle],["Année",state.year||"Non précisée"],["Immatriculation",state.plate||"Non précisée"],["Date souhaitée",formatDate(state.date)],["Heure souhaitée",state.time],["Nom",state.name],["Téléphone",state.phone],["E-mail",state.email||"Non renseigné"],["Informations",state.notes||"Aucune"]];
+ return '<h2 class="step-title">Vérifiez votre demande.</h2><p class="step-sub">Relisez les informations avant de les transmettre au garage.</p><div class="summary">'+rows.map(r=>'<div class="summary-row"><span>'+escapeHtml(r[0])+'</span><strong>'+escapeHtml(r[1])+'</strong></div>').join("")+'</div><div class="notice"><strong>Important :</strong> votre demande sera envoyée au garage. Votre rendez-vous ne sera confirmé qu’après réponse de son équipe.</div>';
+}
+function formatDate(d){if(!d)return "";const p=d.split("-");return p.length===3?p[2]+"/"+p[1]+"/"+p[0]:d;}
+function bindStep(){
+ document.querySelectorAll("[data-service]").forEach(b=>b.addEventListener("click",()=>{state.service=SERVICE_ITEMS[Number(b.dataset.service)].name;render();}));
+ document.querySelectorAll("[data-time]").forEach(b=>b.addEventListener("click",()=>{state.time=b.dataset.time;render();}));
+ const date=$("date");if(date)date.addEventListener("change",()=>{state.date=date.value;state.time="";loadAvailability(state.date);});
+ ["vehicle","year","plate","name","phone","email","notes"].forEach(id=>{const el=$(id);if(el)el.addEventListener("input",()=>state[id]=el.value.trim());});
+}
+function validateStep(){
+ if(state.step===1&&!state.service)return "Veuillez choisir un service.";
+ if(state.step===2&&!state.vehicle.trim())return "Veuillez indiquer la marque et le modèle du véhicule.";
+ if(state.step===2&&state.year&&!/^(19|20)\d{2}$/.test(state.year))return "Veuillez vérifier l'année du véhicule.";
+ if(state.step===3&&!state.date)return "Veuillez choisir une date.";
+ if(state.step===3&&!state.time)return "Veuillez choisir un horaire disponible.";
+ if(state.step===4&&!state.name.trim())return "Veuillez saisir votre nom.";
+ if(state.step===4&&!state.phone.trim())return "Veuillez saisir votre numéro de téléphone.";
+ if(state.step===4&&state.email&&!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(state.email))return "Veuillez vérifier votre adresse e-mail.";
+ return "";
+}
+$("backBtn").addEventListener("click",()=>{if(state.step>1)setStep(state.step-1);});
+$("nextBtn").addEventListener("click",()=>{
+ if(state.busy)return;
+ if(state.step===5){submitBooking();return;}
+ const err=validateStep();if(err){showError(err);return;}
+ if(state.step===2){state.vehicle=$("vehicle").value.trim();state.year=$("year").value.trim();state.plate=$("plate").value.trim();}
+ if(state.step===4){state.name=$("name").value.trim();state.phone=$("phone").value.trim();state.email=$("email").value.trim();state.notes=$("notes").value.trim();}
+ setStep(state.step+1);
+});
+function loadAvailability(date){
+ state.loadingAvailability=true;state.available=[];state.booked=[];state.closed=false;
+ const area=$("availabilityArea");if(area)area.innerHTML='<div class="notice">Recherche des disponibilités…</div>';
+ if(!apiReady()){state.loadingAvailability=false;if(area)area.innerHTML='<div class="notice">Le calendrier sera disponible dès que le garage aura activé son système de réservation.</div>';return;}
+ const cb="rendevoAvailabilityCallback";
+ window[cb]=data=>{
+  state.loadingAvailability=false;
+  if(data&&data.ok){state.available=data.availableTimes||[];state.booked=data.bookedTimes||[];state.closed=!!data.closed;}
+  else{state.available=[];state.closed=true;}
+  if($("availabilityArea"))$("availabilityArea").innerHTML=renderTimes();
+  delete window[cb];
+ };
+ const script=document.createElement("script");
+ script.src=API_URL+"?action=availability&date="+encodeURIComponent(date)+"&callback="+cb;
+ script.onerror=()=>{state.loadingAvailability=false;if($("availabilityArea"))$("availabilityArea").innerHTML='<div class="notice">Impossible de charger les disponibilités. Réessayez dans un instant.</div>';delete window[cb];};
+ document.head.appendChild(script);
+}
+function submitBooking(){
+ const err=validateStep();if(err){showError(err);return;}
+ if(!apiReady()){showError("Le système de réservation n'est pas encore connecté. Le site sera activé dès réception de l'URL Apps Script.");return;}
+ state.busy=true;clearError();$("nextBtn").textContent="Envoi en cours…";$("backBtn").disabled=true;
+ const form=document.createElement("form");form.method="post";form.action=API_URL;form.target="rendevoPostFrame";form.style.display="none";
+ const values={action:"book",name:state.name,phone:state.phone,email:state.email,vehicle:state.vehicle,year:state.year,plate:state.plate,service:state.service,date:state.date,time:state.time,notes:state.notes,website:""};
+ Object.keys(values).forEach(k=>{const input=document.createElement("input");input.type="hidden";input.name=k;input.value=values[k];form.appendChild(input);});
+ document.body.appendChild(form);form.submit();form.remove();
+}
+window.addEventListener("message",event=>{
+ if(!event.data||event.data.type!=="RENDEVO_RESULT")return;
+ state.busy=false;
+ if(event.data.ok){
+  $("bookingFlow").classList.add("hidden");$("successPanel").style.display="block";
+  $("successMessage").textContent=event.data.message||"Votre demande a bien été envoyée.";
+  $("successReference").textContent="RÉFÉRENCE : "+(event.data.reference||"");
+ }else{render();showError(event.data.message||"L'envoi a échoué. Veuillez réessayer.");}
+});
+render();
+</script>
+</body>
+</html>
