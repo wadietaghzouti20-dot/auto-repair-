@@ -27,7 +27,7 @@
 <header class="topbar">
  <div class="shell nav">
   <a class="brand" href="#" aria-label="RENDEVO accueil"><div class="brandmark">R</div><div class="brandname">RENDEVO<span>.</span></div></a>
-  <div class="navright"><b>ESPACE CLIENT</b> &nbsp;·&nbsp; SERVICE AUTOMOBILE</div>
+  <div class="navright"><b id="businessName">GARAGE AUTO</b> &nbsp;·&nbsp; SERVICE AUTOMOBILE</div>
  </div>
 </header>
 <section class="hero">
@@ -208,6 +208,8 @@ function submitBooking(){
  document.body.appendChild(form);form.submit();form.remove();
 }
 window.addEventListener("message",event=>{
+ const resultFrame=$("rendevoPostFrame");
+ if(!resultFrame||event.source!==resultFrame.contentWindow)return;
  if(!event.data||event.data.type!=="RENDEVO_RESULT")return;
  state.busy=false;
  if(event.data.ok){
@@ -216,7 +218,22 @@ window.addEventListener("message",event=>{
   $("successReference").textContent="RÉFÉRENCE : "+(event.data.reference||"");
  }else{render();showError(event.data.message||"L'envoi a échoué. Veuillez réessayer.");}
 });
+function loadBusinessConfig(){
+ if(!apiReady())return;
+ const cb="rendevoInitCallback";
+ window[cb]=data=>{
+  if(data&&data.ok&&data.businessName){
+   $("businessName").textContent=String(data.businessName).toLocaleUpperCase("fr-FR");
+   document.title=String(data.businessName)+" — Rendez-vous automobile";
+  }
+  delete window[cb];
+ };
+ const script=document.createElement("script");
+ script.src=API_URL+"?action=init&callback="+cb;
+ script.onerror=()=>{delete window[cb];};
+ document.head.appendChild(script);
+}
 render();
-</script>
+loadBusinessConfig();
 </body>
 </html>
